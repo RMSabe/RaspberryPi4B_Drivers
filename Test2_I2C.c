@@ -1,3 +1,5 @@
+//A test executable for I2C driver. This test uses the MCP4725 with I2C SCL frequency 400kHz.
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
@@ -9,7 +11,7 @@
 #include "I2C_Ctrl.h"
 
 #define I2C_PORT I2C_CTRL1
-#define I2C_PORT_ENDPOINT I2C_ENDPOINT0
+#define I2C_PORT_ENDPOINT I2C_ENDPOINT0 //GPIOs 2 (SDA) and 3 (SCL)
 
 #define MCP4725_ADDR 0x60
 
