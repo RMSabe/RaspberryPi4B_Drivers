@@ -3,6 +3,12 @@
 
 /*
  * I2C2 & I2C7 are used by the HDMI interfaces. They should not be used for peripherals.
+ * 
+ * I2C registers on BCM2711 are 32bit registers.
+ * These registers can be accessed by 3 addressing modes:
+ * 32bit address (I2C_ADDR_32BIT), 35bit address (I2C_ADDR_35BIT) and Low Peripheral address (I2C_ADDR_LPMODE).
+ *
+ * 1 address mode must be defined before including this header.
  */
 
 #ifdef I2C_ADDR_32BIT
