@@ -4,10 +4,7 @@
 /*
  * BCM2711 GPIO Controll registers are 32bit registers.
  * These registers have 3 addressing modes:
- * 32bit addressing, 35bit addressing and Low Peripheral 32bit addressing.
- *
- * 35bit addressing and Low Peripheral 32bit Addressing can be directly accessed by kernel.
- * 32bit addressing requires DMA Control registers for address remapping.
+ * 32bit addressing (GPIO_ADDR_32BIT), 35bit addressing (GPIO_ADDR_35BIT) and Low Peripheral 32bit addressing (GPIO_ADDR_LPMODE).
  *
  * Addressing mode must be defined before including this header.
  */
