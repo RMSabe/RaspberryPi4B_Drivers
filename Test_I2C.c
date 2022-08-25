@@ -1,3 +1,5 @@
+//A test executable for the I2C driver. This test uses the PCF8574 with I2C SCL frequency 100kHz.
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
@@ -11,7 +13,7 @@
 #define DELAY_TIME_US 1000000
 
 #define I2C_PORT I2C_CTRL1
-#define I2C_TEST_ENDPOINT I2C_ENDPOINT0
+#define I2C_TEST_ENDPOINT I2C_ENDPOINT0 //GPIO 2 (SDA) and 3 (SCL)
 
 void delay_us(uint32_t time_us)
 {
@@ -31,16 +33,6 @@ void send_single_byte(uint8_t byte)
 	i2c_clear_fifo(I2C_PORT);
 
 	return;
-}
-
-uint8_t read_single_byte(void)
-{
-	i2c_set_rw_bit(I2C_PORT, I2C_READ_BIT);
-	i2c_set_transfer_length_reg(I2C_PORT, 1);
-	i2c_start_transfer(I2C_PORT);
-
-	while(!i2c_transfer_done(I2C_PORT)) delay_us(1000);
-	return i2c_get_fifo_data(I2C_PORT);
 }
 
 uint8_t n_byte = 0;
