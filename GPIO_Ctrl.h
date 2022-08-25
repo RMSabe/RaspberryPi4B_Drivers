@@ -1,6 +1,7 @@
 #ifndef GPIO_CTRL_H
 #define GPIO_CTRL_H
 
+//GPIO Pin Mode Definitions: Input, Output and Alternative Functions
 #define GPIO_PINMODE_INPUT 0
 #define GPIO_PINMODE_OUTPUT 1
 #define GPIO_PINMODE_ALTFUNC0 4
@@ -10,6 +11,7 @@
 #define GPIO_PINMODE_ALTFUNC4 3
 #define GPIO_PINMODE_ALTFUNC5 2
 
+//GPIO Pull Up/Down Definitions: No Pull, Pull Up, Pull Down
 #define GPIO_PUDCTRL_NOPULL 0
 #define GPIO_PUDCTRL_PULLUP 1
 #define GPIO_PUDCTRL_PULLDOWN 2
