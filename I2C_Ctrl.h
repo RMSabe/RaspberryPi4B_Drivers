@@ -32,6 +32,8 @@ bool i2c_is_active(void);
 bool i2c_init(void);
 
 //Init I2C controller and GPIOs using default parameters.
+//If use_400kbps, I2C SCL frequency equals 400kHz.
+//Else, I2C SCL frequency equals 100kHz.
 void i2c_init_default(uint8_t i2c_ctrl, uint8_t i2c_endpoint, bool use_400kbps);
 //Deinit I2C controller and GPIOs using default parameters.
 void i2c_deinit_default(uint8_t i2c_ctrl, uint8_t i2c_endpoint);
@@ -68,7 +70,7 @@ bool i2c_transfer_is_active(uint8_t i2c_ctrl); //Ongoing transfer
 
 //Transfer Length Register: 
 //writing on it set next transfer length (in bytes)
-//reading from it get remaining bytes to be transferred (is transfer active) or total bytes transferred (if transfer not active)
+//reading from it get remaining bytes to be transferred (if transfer active) or total bytes transferred (if transfer not active)
 void i2c_set_transfer_length_reg(uint8_t i2c_ctrl, uint16_t length);
 uint16_t i2c_get_transfer_length_reg(uint8_t i2c_ctrl);
 
