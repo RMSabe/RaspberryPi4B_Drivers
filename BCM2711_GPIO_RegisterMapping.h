@@ -2,7 +2,7 @@
 #define BCM2711_GPIO_REGISTER_MAPPING_H
 
 /*
- * BCM2711 GPIO Controll registers are 32bit registers.
+ * BCM2711 GPIO Control registers are 32bit registers.
  * These registers have 3 addressing modes:
  * 32bit addressing (GPIO_ADDR_32BIT), 35bit addressing (GPIO_ADDR_35BIT) and Low Peripheral 32bit addressing (GPIO_ADDR_LPMODE).
  *
