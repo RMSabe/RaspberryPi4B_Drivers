@@ -19,8 +19,12 @@
 #include <stdbool.h>
 #include <stdint.h>
 
+//This function returns true if gpio_init() has already been called.
 bool gpio_is_active(void);
+
+//This function initializes header and proc file. It must be called before calling any other functions in this header.
 bool gpio_init(void);
+
 void gpio_reset_pin(uint8_t pin_number);
 void gpio_set_pinmode(uint8_t pin_number, uint8_t pinmode);
 uint8_t gpio_get_pinmode(uint8_t pin_number);
