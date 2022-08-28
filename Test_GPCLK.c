@@ -1,3 +1,5 @@
+//A Test executable to test GPCLK output.
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
@@ -8,7 +10,7 @@
 #include "GPCLK_Ctrl.h"
 
 #define CLK GPCLK0
-#define CLK_ENDPOINT GPCLK_ENDPOINT0
+#define CLK_ENDPOINT GPCLK_ENDPOINT0 //GPIO 4
 
 int main(int argc, char **argv)
 {
@@ -26,7 +28,7 @@ int main(int argc, char **argv)
 
 	gpclk_init_gpio(CLK, CLK_ENDPOINT);
 	gpclk_reset(CLK);
-	gpclk_set_clk_src(CLK, GPCLK_CLKSRC_PLLD);
+	gpclk_set_clk_src(CLK, GPCLK_CLKSRC_OSC);
 	gpclk_set_mash_level(CLK, 0);
 	gpclk_set_integer_divider(CLK, 4095);
 	gpclk_enable(CLK, true);
