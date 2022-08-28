@@ -2,7 +2,7 @@
 #define BCM2711_GPCLK_REGISTER_MAPPING_H
 
 /*
- * BCM2711 GPCLK Controll registers are 32bit registers.
+ * BCM2711 GPCLK Control registers are 32bit registers.
  * These registers have 3 addressing modes:
  * 32bit addressing (GPCLK_ADDR_32BIT), 35bit addressing (GPCLK_ADDR_35BIT) and Low Peripheral 32bit addressing (GPCLK_ADDR_LPMODE).
  *
