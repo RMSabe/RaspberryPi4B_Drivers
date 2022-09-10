@@ -1,4 +1,6 @@
-obj-m += GPIO_CtrlMod.o I2C_CtrlMod.o GPCLK_CtrlMod.o
+obj-m += GPIO_CtrlMod.o
+obj-m += I2C_CtrlMod.o
+obj-m += GPCLK_CtrlMod.o
 
 KDIR = /lib/modules/$(shell uname -r)/build/
 
