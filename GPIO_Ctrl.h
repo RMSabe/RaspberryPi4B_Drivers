@@ -1,3 +1,5 @@
+//General Purpose Input/Output
+
 #ifndef GPIO_CTRL_H
 #define GPIO_CTRL_H
 
@@ -19,7 +21,7 @@
 #include <stdbool.h>
 #include <stdint.h>
 
-//Returns true if gpio_init() have already been called.
+//Returns true if gpio_init() has already been called.
 bool gpio_is_active(void);
 //Initializes the GPIO Driver and header. This function must be called before calling any other functions in this header. Returns true if driver initialized successfully.
 bool gpio_init(void);
