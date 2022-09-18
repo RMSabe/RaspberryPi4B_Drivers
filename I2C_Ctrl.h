@@ -62,7 +62,7 @@ bool i2c_transfer_is_active(uint8_t i2c_ctrl);
 
 //Transfer Length Register.
 //Set function sets the transfer length.
-//Get function retrieves the number of bytes still remaining to be transferred (if transfer_is_active) or the number of bytes transferred (if not transfer_is_active).
+//Get function retrieves the number of bytes still remaining to be transferred (if transfer_is_active()) or the number of bytes transferred (if not transfer_is_active()).
 //See BCM2711 Datasheet for further reference.
 void i2c_set_transfer_length_reg(uint8_t i2c_ctrl, uint16_t length);
 uint16_t i2c_get_transfer_length_reg(uint8_t i2c_ctrl);
