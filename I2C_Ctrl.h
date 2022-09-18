@@ -31,7 +31,7 @@ bool i2c_init(void);
 
 //Initializes endpoint GPIO pins to I2C function.
 //Initializes I2C Controller using preset default settings.
-//If use_400kbps is set, bitrate = 400 kbps. Else bitrate equals 100 kbps.
+//If use_400kbps is set, bitrate = 400 kbps. Else, bitrate = 100 kbps.
 void i2c_init_default(uint8_t i2c_ctrl, uint8_t i2c_endpoint, bool use_400kbps);
 //Reset endpoint GPIO pins.
 //Disable I2C Controller.
