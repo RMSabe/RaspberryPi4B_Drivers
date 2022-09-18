@@ -1,6 +1,7 @@
 #ifndef GPIO_CTRL_H
 #define GPIO_CTRL_H
 
+//GPIO Pin Function
 #define GPIO_PINMODE_INPUT 0
 #define GPIO_PINMODE_OUTPUT 1
 #define GPIO_PINMODE_ALTFUNC0 4
@@ -10,6 +11,7 @@
 #define GPIO_PINMODE_ALTFUNC4 3
 #define GPIO_PINMODE_ALTFUNC5 2
 
+//GPIO Pull up/down
 #define GPIO_PUDCTRL_NOPULL 0
 #define GPIO_PUDCTRL_PULLUP 1
 #define GPIO_PUDCTRL_PULLDOWN 2
@@ -17,8 +19,11 @@
 #include <stdbool.h>
 #include <stdint.h>
 
+//Returns true if gpio_init() have already been called.
 bool gpio_is_active(void);
+//Initializes the GPIO Driver and header. This function must be called before calling any other functions in this header. Returns true if driver initialized successfully.
 bool gpio_init(void);
+
 void gpio_reset_pin(uint8_t pin_number);
 void gpio_set_pinmode(uint8_t pin_number, uint8_t pinmode);
 uint8_t gpio_get_pinmode(uint8_t pin_number);
